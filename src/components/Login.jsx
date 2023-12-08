@@ -9,14 +9,14 @@ const Login = ({ register, setRegister, iconColor, btnHover }) => {
 
   return (
     <div
-      className="bg-[rgba(0,0,0,0.7)] h-screen w-screen  absolute top-0 left-0 flex justify-center items-center cursor-pointer"
+      className="bg-[rgba(0,0,0,0.7)] h-screen w-screen  absolute top-0 left-0 flex justify-center items-center cursor-pointer "
       onScroll={null}
     >
       {/* sign in form */}
       <div
         className={`${
           toggleFormChange
-            ? "min-w-[300px] xl:w-[400px] min-h-[300px] lg:w-[400px] md:w-[380px] sm:w-[300px] flex flex-col justify-center items-center  rounded-lg  p-10 backdrop-blur bg-[rgba(0,0,0,0.5)]"
+            ? "min-w-[300px] xl:w-[400px] min-h-[300px] lg:w-[400px] md:w-[380px] sm:w-[300px] flex flex-col justify-center items-center  rounded-lg  p-10 backdrop-blur bg-[rgba(0,0,0,0.5)] border border-orange-500"
             : "hidden"
         }`}
       >
@@ -46,7 +46,7 @@ const Login = ({ register, setRegister, iconColor, btnHover }) => {
             <div className="text-md mb-2 flex justify-between px-2">
               <div className="w-[46%] flex justify-between">
                 {" "}
-                <input type="radio" />
+                <input type="checkbox" />
                 <label className="text-white font-primary">Remember me</label>
               </div>
               <Link className="text-orange-500">Forgot password?</Link>
@@ -87,7 +87,7 @@ const Login = ({ register, setRegister, iconColor, btnHover }) => {
       <div
         className={`${
           !toggleFormChange
-            ? "min-w-[300px] xl:w-[400px] min-h-[300px] lg:w-[400px] md:w-[380px] sm:w-[300px] flex flex-col justify-center items-center  rounded-lg  p-10 backdrop-blur bg-[rgba(0,0,0,0.5)]"
+            ? "min-w-[300px] xl:w-[400px] min-h-[300px] lg:w-[400px] md:w-[380px] sm:w-[300px] flex flex-col justify-center items-center  rounded-lg  p-10 backdrop-blur bg-[rgba(0,0,0,0.5)] border border-orange-500"
             : "hidden"
         }`}
       >

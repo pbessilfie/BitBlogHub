@@ -67,15 +67,6 @@ const Navbar = () => {
         </ul>
         {/* menu icons */}
         <div className="text-white lg:flex gap-4 items-center sm:flex ">
-          <a href="/" className="hover:text-orange-500">
-            <FaMeta />
-          </a>
-          <a href="/" className="hover:text-orange-500">
-            <FaDribbble />
-          </a>
-          <a href="/" className="hover:text-orange-500">
-            <FaTwitter />
-          </a>
           <button
             className="bg-orange-500 text-white font-medium px-6 py-2  rounded-md  hover:bg-white hover:text-orange-500 transition-all duration-200"
             onClick={() => setRegister(!register)}
@@ -88,7 +79,7 @@ const Navbar = () => {
         <ul
           className={`md:hidden gap-12 text-lg block space-y-4 px-4 py-6 mt-14 bg-white ${
             isMenuOpen
-              ? "fixed top-0 left-0 w-full transition-all ease-out duration-150"
+              ? "fixed top-0 left-0 w-8/12 sm:w-2/6 h-screen rounded transition-all ease-out duration-150"
               : "hidden"
           }`}
         >
@@ -99,6 +90,17 @@ const Navbar = () => {
               </NavLink>
             </li>
           ))}
+          <div className=" text-black w-1/2 flex justify-between">
+            <a href="/" className="hover:text-orange-500">
+              <FaMeta />
+            </a>
+            <a href="/" className="hover:text-orange-500">
+              <FaDribbble />
+            </a>
+            <a href="/" className="hover:text-orange-500">
+              <FaTwitter />
+            </a>
+          </div>
         </ul>
       </nav>
       {register && (

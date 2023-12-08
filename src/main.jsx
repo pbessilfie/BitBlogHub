@@ -8,6 +8,7 @@ import Blogs from "./pages/Blogs";
 import Service from "./pages/Service";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import SingleBlog from "./pages/SingleBlog";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,12 @@ const router = createBrowserRouter([
       {
         path: "/service",
         element: <Service />,
+      },
+      {
+        path: "/blogs/:id",
+        element: <SingleBlog />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/blogs/${params.id}`),
       },
     ],
   },

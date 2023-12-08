@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 const Pagination = ({ pageSize, currentPage, onPageChange, blogs }) => {
   const totalPages = blogs ? Math.ceil(blogs.length / pageSize) : 8;
-  console.log(totalPages);
+ 
   const renderPaginationLinks = () => {
     return Array.from({ length: totalPages }, (_, i) => i + 1).map(
       (pageNumber) => (
