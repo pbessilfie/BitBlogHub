@@ -48,16 +48,22 @@ const BlogPage = () => {
       </div>
 
       {/* blogCards section */}
-      <div>
+      <div className="flex flex-col lg:flex-row gap-12">
         <BlogCards
           blogs={blogs}
           currentPage={currentPage}
           selectedCategory={selectedCategory}
           pageSize={pageSize}
         />
+
+        {/* sidebar component */}
+        <div>
+          <SideBar />
+        </div>
       </div>
 
       {/* pagination section */}
+
       <div>
         <Pagination
           onPageChange={handlePageChange}
@@ -65,9 +71,6 @@ const BlogPage = () => {
           pageSize={pageSize}
           blogs={blogs}
         />
-      </div>
-      <div>
-        <SideBar />
       </div>
     </div>
   );
