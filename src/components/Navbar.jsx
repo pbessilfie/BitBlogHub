@@ -67,6 +67,15 @@ const Navbar = () => {
         </ul>
         {/* menu icons */}
         <div className="text-white lg:flex gap-4 items-center sm:flex ">
+            <a href="/" className="hover:text-orange-500">
+              <FaMeta />
+            </a>
+            <a href="/" className="hover:text-orange-500">
+              <FaDribbble />
+            </a>
+            <a href="/" className="hover:text-orange-500">
+              <FaTwitter />
+            </a>
           <button
             className="bg-orange-500 text-white font-medium px-6 py-2  rounded-md  hover:bg-white hover:text-orange-500 transition-all duration-200"
             onClick={() => setRegister(!register)}

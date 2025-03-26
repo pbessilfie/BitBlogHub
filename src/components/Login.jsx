@@ -11,6 +11,7 @@ const Login = ({ register, setRegister, iconColor, btnHover }) => {
     <div
       className="bg-[rgba(0,0,0,0.7)] h-screen w-screen  absolute top-0 left-0 flex justify-center items-center cursor-pointer "
       onScroll={null}
+     
     >
       {/* sign in form */}
       <div

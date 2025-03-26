@@ -5,15 +5,9 @@ import SideBar from "../components/SideBar";
 
 const SingleBlog = () => {
   const data = useLoaderData();
-  const {
-    title,
-    image,
-    
-    author,
-    published_date,
-    reading_time,
-    content,
-  } = data[0];
+  console.log(data)
+  const { title, image, author, published_date, reading_time, content } =
+    data[0];
 
   return (
     <div className="">
@@ -46,35 +40,40 @@ const SingleBlog = () => {
               consectetur a erat nam at lectus urna duis convallis convallis
               tellus id interdum velit laoreet id donec ultrices tincidunt arcu
               non sodales neque sodales ut etiam sit amet nisl purus in mollis
-            </p><br/>
+            </p>
+            <br />
             <p>
               sed vulputate odio ut enim blandit volutpat maecenas volutpat
               blandit aliquam etiam erat velit scelerisque in dictum non
               consectetur a erat nam at lectus urna duis convallis convallis
               tellus id interdum velit laoreet id donec ultrices tincidunt arcu
               non sodales neque sodales ut etiam sit amet nisl purus in mollis
-            </p><br/>
+            </p>
+            <br />
             <p>
               sed vulputate odio ut enim blandit volutpat maecenas volutpat
               blandit aliquam etiam erat velit scelerisque in dictum non
               consectetur a erat nam at lectus urna duis convallis convallis
               tellus id interdum velit laoreet id donec ultrices tincidunt arcu
               non sodales neque sodales ut etiam sit amet nisl purus in mollis
-            </p><br/>
+            </p>
+            <br />
             <p>
               sed vulputate odio ut enim blandit volutpat maecenas volutpat
               blandit aliquam etiam erat velit scelerisque in dictum non
               consectetur a erat nam at lectus urna duis convallis convallis
               tellus id interdum velit laoreet id donec ultrices tincidunt arcu
               non sodales neque sodales ut etiam sit amet nisl purus in mollis
-            </p><br/>
+            </p>
+            <br />
             <p>
               sed vulputate odio ut enim blandit volutpat maecenas volutpat
               blandit aliquam etiam erat velit scelerisque in dictum non
               consectetur a erat nam at lectus urna duis convallis convallis
               tellus id interdum velit laoreet id donec ultrices tincidunt arcu
               non sodales neque sodales ut etiam sit amet nisl purus in mollis
-            </p><br/>
+            </p>
+            <br />
             <p>
               sed vulputate odio ut enim blandit volutpat maecenas volutpat
               blandit aliquam etiam erat velit scelerisque in dictum non
@@ -86,7 +85,7 @@ const SingleBlog = () => {
         </div>
 
         <div className="lg:w-1/2">
-            <SideBar/>
+          <SideBar />
         </div>
       </div>
     </div>
