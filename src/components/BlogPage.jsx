@@ -10,20 +10,28 @@ const BlogPage = () => {
   const pageSize = 12;
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [activeCategory, setActiveCategory] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    async function fetchBlog() {
-      let url = `//localhost:5000/blogs?page=${currentPage}&limit=${pageSize}`;
+    const fetchBlog = async () => {
+      let url = `https://bitblog-backend.onrender.com/blogs?page=${currentPage}&limit=${pageSize}`;
+      try {
+        setLoading(true);
+        //   filter by category
+        if (selectedCategory) {
+          url += `&category=${selectedCategory}`;
+        }
 
-      //   filter by category
-      if (selectedCategory) {
-        url += `&category=${selectedCategory}`;
+        const response = await fetch(url);
+        const data = await response.json();
+        setBlogs(data);
+      } catch (error) {
+        console.error("Error fetching blogs:", error);
+        setLoading(false);
+      } finally {
+        setLoading(false);
       }
-
-      const response = await fetch(url);
-      const data = await response.json();
-      setBlogs(data);
-    }
+    };
     fetchBlog();
   }, [currentPage, pageSize, selectedCategory]);
 
@@ -49,15 +57,19 @@ const BlogPage = () => {
 
       {/* blogCards section */}
       <div className="flex flex-col lg:flex-row gap-12">
-        <BlogCards
-          blogs={blogs}
-          currentPage={currentPage}
-          selectedCategory={selectedCategory}
-          pageSize={pageSize}
-        />
+        <div className="flex-1">
+          {" "}
+          <BlogCards
+            blogs={blogs}
+            currentPage={currentPage}
+            selectedCategory={selectedCategory}
+            pageSize={pageSize}
+            loading={loading}
+          />
+        </div>
 
         {/* sidebar component */}
-        <div>
+        <div className="w-full lg:w-1/4">
           <SideBar />
         </div>
       </div>
