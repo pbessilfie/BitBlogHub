@@ -5,7 +5,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import Home from "./pages/Home";
 import Blogs from "./pages/Blogs";
-import Service from "./pages/Service";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import SingleBlog from "./pages/SingleBlog";
@@ -31,15 +30,12 @@ const router = createBrowserRouter([
         path: "/contact",
         element: <Contact />,
       },
-      {
-        path: "/service",
-        element: <Service />,
-      },
+      
       {
         path: "/blogs/:id",
         element: <SingleBlog />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/blogs/${params.id}`),
+          fetch(`https://bitblog-backend.onrender.com/blogs/${params.id}`),
       },
     ],
   },
