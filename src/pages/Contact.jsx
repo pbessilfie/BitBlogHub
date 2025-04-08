@@ -61,7 +61,7 @@ const Contact = () => {
                 Email
               </h4>
               <span className="text-sm text-gray-500 ml-2">
-                +233 24 850 3913
+                bitblog@gmail.com
               </span>
             </div>
             <div className="w-full h-20 flex flex-col justify-between px-4 mb-4">
@@ -70,7 +70,7 @@ const Contact = () => {
                 Address
               </h4>
               <span className="text-sm text-gray-500 ml-2">
-                +233 24 850 3913
+                Kwabenya, Accra, Ghana
               </span>
             </div>
           </div>
