@@ -3,11 +3,9 @@ import { NavLink } from "react-router-dom";
 import { FaTwitter, FaDribbble, FaBars, FaTimes } from "react-icons/fa";
 import { FaMeta } from "react-icons/fa6";
 import "../App.css";
-import Login from "./Login";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [register, setRegister] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -28,10 +26,7 @@ const Navbar = () => {
       path: "/contact",
       link: "Contact",
     },
-    {
-      path: "/service",
-      link: "Service",
-    },
+   
   ];
   return (
     <header className="bg-black text-white fixed top-0 left-0 right-0">
@@ -76,12 +71,7 @@ const Navbar = () => {
             <a href="/" className="hover:text-orange-500">
               <FaTwitter />
             </a>
-          <button
-            className="bg-orange-500 text-white font-medium px-6 py-2  rounded-md  hover:bg-white hover:text-orange-500 transition-all duration-200"
-            onClick={() => setRegister(!register)}
-          >
-            Log in
-          </button>
+       
         </div>
 
         {/* navlinks for mobile devices */}
@@ -112,14 +102,7 @@ const Navbar = () => {
           </div>
         </ul>
       </nav>
-      {register && (
-        <Login
-          register={register}
-          setRegister={setRegister}
-          iconColor={"text-orange-500"}
-          btnHover={"hover:bg-orange-500 hover:text-white"}
-        />
-      )}
+     
     </header>
   );
 };
